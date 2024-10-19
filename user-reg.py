@@ -8,7 +8,7 @@ from openai import OpenAI
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='API_KEY')
 
 
 # Flush socket in browser
