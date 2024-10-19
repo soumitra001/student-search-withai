@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with MyBOT</title>
+</head>
+<body>
+    <h1>Chat with MyBOT</h1>
+    
+    <form action="/chat" method="POST">
+        <label for="message">Your Message:</label><br>
+        <textarea name="message" id="message" rows="4" required></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if user_message %}
+        <h2>Your Message:</h2>
+        <p>{{ user_message }}</p>
+        <h2>ChatGPT's Response:</h2>
+        <p>{{ chat_response }}</p>
+    {% endif %}
+    
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

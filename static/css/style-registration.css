@@ -1,0 +1,141 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3b3b98, #6a89cc);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(to bottom, #3b3b98, #6a89cc);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left-side h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.left-side button {
+    padding: 10px 20px;
+    background-color: white;
+    border: none;
+    color: #3b3b98;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.right-side {
+    flex: 2;
+    padding: 40px;
+}
+
+.right-side h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group input, .form-group select {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group select {
+    width: 100%;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.toggle-buttons .active {
+    background-color: #3b3b98;
+    color: white;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.login-btn {
+    background-color: #aecabe;
+    color: rgb(54, 130, 116);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d8e9d9;
+    color: rgb(62, 19, 161);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+

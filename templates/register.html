@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-registration.css') }}"  >
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <body>
+        <div class="container">
+            <div class="left-side">
+                <h2>Welcome</h2>
+                <p> Already have an account? Login here</p>
+                <a href="/login" class="button">Login</a>
+            </div>
+            <div class="right-side">
+                <h2>Student Registration</h2>
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="studentname" name="studentname" placeholder="Student Name *" required>
+                        <input type="text" id="studentclass" name="studentclass" placeholder="Class *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email"  placeholder="Email *" required>
+                        <input type="text" id="username" name="username"  placeholder="Username *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password"  placeholder="Password *" required>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password *" required>   
+                    </div>
+                    <button type="submit" class="register-btn">Register</button>
+                </form>
+
+            </div>
+        </div>
+            
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+            <li style="color: {{ 'red' if category == 'error' else 'green' }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}  
+
+</body> 
+</html>
+

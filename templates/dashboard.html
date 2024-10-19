@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .logout-button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            top: 50px; /* Distance from the top */
+            left: 100px;
+        }
+        .chatgpt-button {
+            background-color: #47ff7e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            top: 150px; /* Distance from the top */
+            left: 180px;
+        }
+        .logout-button:hover {
+            background-color: #e84118;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard, {{ user }}!</h1>
+    <p>This is your user dashboard where you can manage your account and view personalized content.</p>
+    <form action="/logout" method="POST">
+        <button type="submit" class="logout-button">Logout</button>
+        
+    </form>
+
+
+    <form action="openchatgpt">
+        <button type="submit" class ="chatgpt-button">Open1 GPT</button>
+    </form>
+    
+    
+</body>
+</html>
